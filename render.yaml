@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: dsxmods-bot
+    env: python
+    region: singapore
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: HWID_KEY
+        value: d2b0ac3c48a5641ccfe2fcd2a2b4d0f947b19f378e8514018306395858e0e3cb
+      - key: BOT_TOKEN
+        sync: false
+      - key: CHAT_ID
+        sync: false
+    autoDeploy: true
+    plan: free
